@@ -142,44 +142,6 @@ h6 {
   margin: 15px auto;
   display: block;
   width: 120px;
-  border: 8px solid #2c2f3f;
-}
-
-#header .profile h1 {
-  font-size: 24px;
-  margin: 0;
-  padding: 0;
-  font-weight: 600;
-  -moz-text-align-last: center;
-  text-align-last: center;
-  font-family: "Poppins", sans-serif;
-}
-
-#header .profile h1 a,
-#header .profile h1 a:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-#header .profile .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: #212431;
-  color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-}
-
-#header .profile .social-links a:hover {
-  background: #149ddd;
-  color: #fff;
-  text-decoration: none;
 }
 
 #main {
@@ -208,6 +170,32 @@ h6 {
   }
 }
 
+
+.coin {
+  background-image: url("/assets/img/logo.png");
+  background-size: 100% 100%;
+  height: 120px;
+  margin: 10px auto;
+  position: relative;
+  width: 100px;
+  transform-style: preserve-3d;
+}
+
+/* Use a keyframes animation for smooth and continuous rotation */
+@keyframes rotate-coin {
+  0% {
+      transform: rotateY(0deg);
+  }
+  100% {
+      transform: rotateY(360deg);
+  }
+}
+
+.coin:hover {
+  animation: rotate-coin 5s linear infinite; /* Adjust the duration as needed */
+}
+
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -232,8 +220,7 @@ h6 {
   display: flex;
   align-items: center;
   color: #a8a9b4;
-  padding: 12px 15px;
-  margin-bottom: 8px;
+  padding: 12px 0px;
   transition: 0.3s;
   font-size: 15px;
 }
@@ -250,14 +237,14 @@ h6 {
 .nav-menu .active:focus,
 .nav-menu li:hover > a {
   text-decoration: none;
-  color: #fff;
+  color: var(--main-color);
 }
 
 .nav-menu a:hover i,
 .nav-menu .active i,
 .nav-menu .active:focus i,
 .nav-menu li:hover > a i {
-  color: #149ddd;
+  color: var(--secondary-color);
 }
 
 /* Mobile Navigation */
@@ -399,40 +386,83 @@ section {
 }
 
 /*--------------------------------------------------------------
-# About
+# Blog
 --------------------------------------------------------------*/
-.about .content h3 {
-  font-weight: 700;
-  font-size: 26px;
-  color: #173b6c;
+
+.bg-dark {
+  background: url(/assets/img/bg-dark.jpg);
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 12px;
+}
+.blog {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: fit-content;
+  border: rgba(0, 255, 255, 0.9) 1px solid;
+  padding: 12px 18px;
+  
+}
+.blog pre {
+  border: var(--secondary-color) 1px solid;
+  padding: 12px;
+  color: var(--secondary-color);
 }
 
-.about .content ul {
-  list-style: none;
-  padding: 0;
+.blog table  {
+  color: #fff;
+}
+.blog a {
+  color: var(--secondary-color);
+}
+.blog a:hover {
+  border-bottom: var(--secondary-color) dotted 1px ;
+}
+.blog h2 {
+  color: var(--secondary-color);
+  border-bottom: var(--main-color) 1px solid ;
+}
+.blog p {
+  color: #fff;
+}
+.blog ul li {
+  color: var(--secondary-color);
+}
+.blog ul li a{
+  color: var(--secondary-color);
+  font-size: 24px;
 }
 
-.about .content ul li {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
+.blog ul li:hover {
+  color: var(--main-color);
 }
 
-.about .content ul strong {
-  margin-right: 10px;
+.blog table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-.about .content ul i {
-  font-size: 16px;
-  margin-right: 5px;
-  color: #149ddd;
-  line-height: 0;
+.blog table td, .blog table th {
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
-.about .content p:last-child {
-  margin-bottom: 0;
-}
+.blog table tr:nth-child(even){background-color: rgba(30, 30, 30, 0.7);}
 
+.blog table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: white;
+}
+.blog ol {
+  color: var(--secondary-color);
+}
+.blog h1, .blog h2, .blog h3, .blog h4, .blog h5{
+  color: var(--secondary-color);
+}
 /*--------------------------------------------------------------
 # Facts
 --------------------------------------------------------------*/

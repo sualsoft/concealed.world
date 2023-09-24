@@ -1,0 +1,19 @@
+{{define "main"}}
+<section class="bg-dark">
+  <div class="container blog">
+    <h2>Blog</h2>
+    <br />
+    <p>No one needs long introductions, explore for yourself.</p>
+    <ul>
+      {{range .RegularPages}}
+      <li><a href="{{.Permalink}}"> {{.Title}} </a> - {{ .PublishDate.Format "January 2, 2006" }}</li>
+      {{end}}
+    </ul>
+    <p>
+      These have seen some editing to remove the unnecessary, fix dead links,
+      and so on. Server abuse has resulted in losing the dates of a few
+      articles.
+    </p>
+  </div>
+</section>
+{{end}}

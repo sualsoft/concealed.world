@@ -1,0 +1,13 @@
+{{define "main"}}
+<section class="bg-dark">
+  <div class="container blog">
+    <h2>{{.Title}}</h2>
+    <br />
+    <ul>
+      {{ range.RegularPages}}
+      <li><a href="{{.Permalink}}">{{.Title}} </a></li>
+      {{end}}
+    </ul>
+  </div>
+</section>
+{{end}}
