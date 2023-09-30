@@ -1,3 +1,51 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
+
+[menu]
+[[menu.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 1
+    [menu.main.params]
+      icon = 'bx bx-user'
+[[menu.main]]
+    name = 'Blog'
+    pageRef = '/blog'
+    weight = 2
+    [menu.main.params]
+      icon = 'bx bx-file-blank'
+[[menu.main]]
+    name = 'Contact'
+    pageRef = '/contact'
+    weight = 3
+    [menu.main.params]
+      icon = 'bi bi-person-lines-fill'
+
+[[menu.main]]
+    name = 'Links'
+    pageRef = '/links'
+    weight = 4
+    [menu.main.params]
+      icon = 'bi bi-link-45deg'
+
+[[menu.main]]
+    name = 'Other'
+    pageRef = '/other'
+    weight = 5
+    [menu.main.params]
+      icon = 'd-none'
+
+[[menu.main]]
+    name = 'Git'
+    pageRef = 'https://git.concealed.world/'
+    weight = 6
+    [menu.main.params]
+      icon = 'd-none'
+
+[[menu.main]]
+    name = 'Irc'
+    pageRef = 'https://irc.concealed.world/'
+    weight = 7
+    [menu.main.params]
+      icon = 'd-none'

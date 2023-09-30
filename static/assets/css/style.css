@@ -13,6 +13,7 @@
 body {
   font-family: "vga", sans-serif;
   color: #272829;
+  cursor: url('/assets/img/cursor.png'), auto !important;
 }
 
 a {
@@ -23,7 +24,9 @@ a {
 a:hover {
   color: #37b3ed;
   text-decoration: none;
+  cursor: url('/assets/img/cursor-links.png'), pointer;
 }
+
 
 h1,
 h2,

@@ -6,41 +6,15 @@
 
     <nav id="navbar" class="nav-menu navbar">
       <ul>
+        {{- range site.Menus.main }}
         <li>
-          <a href="/about" class="nav-link scrollto"
-            ><i class="bx bx-user"></i> <span>About</span></a
+          <a href="{{.URL}}" class="nav-link scrollto">
+            {{- with .Params.icon -}} <i class="{{ . }}"></i>
+            {{end}}
+            <span>{{.Name}}</span></a
           >
         </li>
-        <li>
-          <a href="/blog/" class="nav-link scrollto"
-            ><i class="bx bx-file-blank"></i> <span>Blog</span></a
-          >
-        </li>
-        <li>
-          <a href="/contact/" class="nav-link scrollto"
-            ><i class="bi bi-person-lines-fill"></i><span>Contact</span></a
-          >
-        </li>
-        <li>
-          <a href="/links/" class="nav-link scrollto"
-            ><i class="bi bi-link-45deg"></i><span>Links</span></a
-          >
-        </li>
-        <li>
-          <a href="/other/" class="nav-link scrollto"> <span>Other</span></a>
-        </li>
-
-        <li>
-          <a href="https://git.concealed.world/" class="nav-link scrollto"
-            ><span>Git</span></a
-          >
-        </li>
-
-        <li>
-          <a href="https://git.concealed.world/" class="nav-link scrollto">
-            <span>IRC</span></a
-          >
-        </li>
+        {{end}}
       </ul>
     </nav>
     <!-- .nav-menu -->
