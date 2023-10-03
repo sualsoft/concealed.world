@@ -1,6 +1,21 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
+defaultContentLanguage = "en"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    contentDir = "content/en"
+    languageCode = "en-us"
+
+  [languages.hr]
+    languageName = "Croatian"
+    weight = 2
+    contentDir = "content/hr"
+    languageCode = "hr-hr"
+    prefixDefaultLanguage = true
 
 [menu]
 [[menu.main]]
@@ -21,31 +36,71 @@ title = 'My New Hugo Site'
     weight = 3
     [menu.main.params]
       icon = 'bi bi-person-lines-fill'
-
 [[menu.main]]
     name = 'Links'
     pageRef = '/links'
     weight = 4
     [menu.main.params]
       icon = 'bi bi-link-45deg'
-
 [[menu.main]]
     name = 'Other'
     pageRef = '/other'
     weight = 5
     [menu.main.params]
       icon = 'd-none'
-
 [[menu.main]]
     name = 'Git'
     pageRef = 'https://git.concealed.world/'
     weight = 6
     [menu.main.params]
       icon = 'd-none'
-
 [[menu.main]]
     name = 'Irc'
     pageRef = 'https://irc.concealed.world/'
     weight = 7
     [menu.main.params]
+      icon = 'd-none'
+
+[[menu.hr]]
+[[menu.hr.main]]
+    name = 'O nama'
+    pageRef = '/hr/o-nama'
+    weight = 1
+    [menu.hr.main.params]
+      icon = 'bx bx-user'
+[[menu.hr.main]]
+    name = 'Blog'
+    pageRef = '/hr/blog'
+    weight = 2
+    [menu.hr.main.params]
+      icon = 'bx bx-file-blank'
+[[menu.hr.main]]
+    name = 'Kontakt'
+    pageRef = '/hr/kontakt'
+    weight = 3
+    [menu.hr.main.params]
+      icon = 'bi bi-person-lines-fill'
+[[menu.hr.main]]
+    name = 'Poveznice'
+    pageRef = '/hr/poveznice'
+    weight = 4
+    [menu.hr.main.params]
+      icon = 'bi bi-link-45deg'
+[[menu.hr.main]]
+    name = 'Ostalo'
+    pageRef = '/hr/ostalo'
+    weight = 5
+    [menu.hr.main.params]
+      icon = 'd-none'
+[[menu.hr.main]]
+    name = 'Git'
+    pageRef = 'https://git.concealed.world/'
+    weight = 6
+    [menu.hr.main.params]
+      icon = 'd-none'
+[[menu.hr.main]]
+    name = 'Irc'
+    pageRef = 'https://irc.concealed.world/'
+    weight = 7
+    [menu.hr.main.params]
       icon = 'd-none'

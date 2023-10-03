@@ -3,14 +3,55 @@
     <div class="profile">
       <a href="/"> <div class="coin"></div> </a>
     </div>
+    
+    <div>
+
+
+
+      <select id="language-selector">
+        {{ range .Site.Languages }}
+          <option value="{{ .Lang }}">{{ .LanguageName }}</option>
+        {{ end }}
+      </select>
+
+      <script>
+        // Get the language selector element
+const languageSelector = document.getElementById('language-selector');
+
+// Function to handle language change
+languageSelector.addEventListener('change', function () {
+  const selectedLanguage = languageSelector.value;
+
+  // Save the selected language in local storage
+  localStorage.setItem('selectedLanguage', selectedLanguage);
+
+  // Redirect to the corresponding page for the selected language
+  window.location.href = `/${selectedLanguage}/`; // Replace with your actual URL structure
+});
+
+// Check if there's a previously selected language in local storage
+const storedLanguage = localStorage.getItem('selectedLanguage');
+if (storedLanguage) {
+  // Set the dropdown to the stored language
+  languageSelector.value = storedLanguage;
+}
+
+      </script>
+      
+
+  </div>
+    
+
+    
+
+    <!-- layouts/partials/language-switcher.html -->
 
     <nav id="navbar" class="nav-menu navbar">
       <ul>
         {{- range site.Menus.main }}
         <li>
           <a href="{{.URL}}" class="nav-link scrollto">
-            {{- with .Params.icon -}} <i class="{{ . }}"></i>
-            {{end}}
+            <i class="{{ .Params.icon }}"></i>
             <span>{{.Name}}</span></a
           >
         </li>

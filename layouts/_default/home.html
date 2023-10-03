@@ -3,14 +3,16 @@
   {{ partial "head.html" .}}
   <body>
     <section class="landing-page">
+      {{with .Params.hero}}
       <div>
         <div class="btn">
-          <a href="/blog">~$>connect</a>
+          <a href="{{.link}}">{{.btn}}</a>
         </div>
         <div class="image">
           <img src="/assets/img/bg.png" alt="" />
         </div>
       </div>
+      {{end}}
     </section>
   </body>
 </html>
